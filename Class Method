@@ -1,0 +1,34 @@
+# Class Method
+class student:
+
+    school_name = 'Dehli Public school'
+
+    def __init__(self,rno,name,age):
+        self.rno = rno
+        self.name = name
+        self.age = age
+
+    def display(self):
+        print("Roll no:",self.rno)
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("school name:",student.school_name)
+
+    @classmethod
+    def demo(cls, chnage_schlname):
+        student.school_name = chnage_schlname
+        print("change school name:", student.school_name)
+
+obj1std = student(100,"Krishna",22)
+obj1std.display()
+student.demo("Narayana Public School")
+
+class Fruit:
+
+    fruit_name = 'Mango'
+
+    @classmethod
+    def disp_fruit(cls):
+        print(Fruit.fruit_name)
+
+Fruit.disp_fruit()
